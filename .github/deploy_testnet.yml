@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  deploy_to_aeHosting:
+    runs-on: ubuntu-latest
+    name: A job to deploy file to aeHosting
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+
+        - name: Deploy to aeHosting
+          id: deploy
+          uses: archethic-foundation/aeweb-github-action@v1.8.9
+          with:
+            seed: ${{ secrets.ARCH_BASE_SEED }}
+            endpoint: "https://testnet.archethic.net"
+            path: "build/web"
+            keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
+            keychainWebsiteService: "aeweb-SAMPLE"
+            sendTransactionTimeout: 260
+            percentageOfConfirmations: 50
