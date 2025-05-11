@@ -33,4 +33,7 @@ jobs:
           percentageOfConfirmations: 50
 
       - name: Show URL
+        run: echo "URLTA = ${{ steps.deploy.outputs.transaction-address }}"
+
+      - name: Show URL
         run: echo "URL = ${{ steps.deploy.outputs.website_url }}"
