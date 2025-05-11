@@ -32,6 +32,11 @@ jobs:
           sendTransactionTimeout: 260
           percentageOfConfirmations: 50
 
+      - name: Dump all GitHub context
+        run: echo "$GITHUB_OUTPUT"
+        env:
+          GITHUB_OUTPUT: $GITHUB_OUTPUT
+ 
       - name: Show URL
         run: echo "URLTA = ${{ steps.deploy.outputs.transaction-address }}"
 
