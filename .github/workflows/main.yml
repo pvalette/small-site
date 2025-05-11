@@ -18,7 +18,5 @@ jobs:
             seed: ${{ secrets.ARCH_BASE_SEED }}
             endpoint: "https://testnet.archethic.net"
             path: "build/web"
-            keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
-            keychainWebsiteService: "aeweb-SAMPLE"
             sendTransactionTimeout: 260
             percentageOfConfirmations: 50
