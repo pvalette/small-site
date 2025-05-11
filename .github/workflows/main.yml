@@ -27,4 +27,4 @@ jobs:
             sendTransactionTimeout: 260
             percentageOfConfirmations: 50
         - name: Show URL
-            run: echo "URL = ${{ steps.deploy.outputs.website_url }}"
+          run: echo "URL = ${{ steps.deploy.outputs.website_url }}"
