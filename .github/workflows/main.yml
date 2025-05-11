@@ -1,6 +1,12 @@
 on:
+  workflow_dispatch:
+    inputs:
+      ARCH_BASE_SEED:
+        description: "seed"
+        required: true
+        default: "production"
   push:
-    branches:
+     branches:
       - main
  
 jobs:
@@ -15,7 +21,7 @@ jobs:
           id: deploy
           uses: archethic-foundation/aeweb-github-action@v1.8.9
           with:
-            seed: ${{ secrets.ARCH_BASE_SEED }}
+            seed: ${{  github.event.inputs.ARCH_BASE_SEED }}
             endpoint: "https://testnet.archethic.net"
             path: "/"
             sendTransactionTimeout: 260
