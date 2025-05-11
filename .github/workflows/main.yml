@@ -38,4 +38,4 @@ jobs:
       - name: Show URL
         run: echo "URL = ${{ steps.deploy.outputs.website_url }}"
     outputs:
-    website_url: ${{ steps.deploy.outputs.website_url }}
+       website_url: ${{ steps.deploy.outputs.website_url }}
