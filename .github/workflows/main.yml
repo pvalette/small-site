@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
     inputs:
-      ARCH_BASE_SEED_API:
+      ARCH_BASE_SEED:
         description: "seed"
         required: true
         default: "production"
@@ -22,7 +22,7 @@ jobs:
         id: deploy  # ✅ Ce ID est essentiel pour `steps.deploy.outputs.*`
         uses: archethic-foundation/aeweb-github-action@v1.8.15
         with:
-          seed: ${{ github.event.inputs.ARCH_BASE_SEED_API }}
+          seed: ${{ github.event.inputs.ARCH_BASE_SEED }}
           endpoint: "https://testnet.archethic.net"
           path: "/"
           sendTransactionTimeout: 260
