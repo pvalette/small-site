@@ -40,7 +40,7 @@ jobs:
         
       - name: Notify deployment
         run: |
-           curl -X POST https://ae-deploy-button.vercel.app/api/webhooks \
+           curl -X POST https://ae-deploy-button.vercel.app/api/webhook \
            -H "Content-Type: application/json" \
            -d '{"runId": "${{ github.run_id }}", "address": "${{ steps.deploy.outputs.website_url }}"}'
 
