@@ -20,5 +20,5 @@ jobs:
             path: "build/web"
             keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
             keychainWebsiteService: "aeweb-SAMPLE"
-            sendTransactionTimeout: 260
+            sendTransactionTimeout: 860
             percentageOfConfirmations: 50
