@@ -18,6 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Dump seed context
+        run: echo  ${{ github.event.inputs.ARCH_BASE_SEED }}
+ 
+
       - name: Deploy to aeHosting
         id: deploy  # ✅ Ce ID est essentiel pour `steps.deploy.outputs.*`
         uses: archethic-foundation/aeweb-github-action@v1.8.15
@@ -29,10 +33,7 @@ jobs:
           percentageOfConfirmations: 50
  
 
-      - name: Dump seed context
-        run: echo "$ARCH_BASE_SEED"
-        env:
-          ARCH_BASE_SEED: $ARCH_BASE_SEED
+  
 
       - name: Dump all GitHub context
         run: echo "$GITHUB_OUTPUT"
