@@ -29,7 +29,9 @@ jobs:
           seed: ${{ github.event.inputs.ARCH_BASE_SEED }}
           endpoint: "https://testnet.archethic.net"
           path: "/"
-          sendTransactionTimeout: 260
+          keychainFundingService: "sample.wallett"
+          keychainWebsiteService: "aeweb-AEHOSTING-sample-01"
+          sendTransactionTimeout: 860
           percentageOfConfirmations: 50
  
 
