@@ -27,6 +27,12 @@ jobs:
           path: "/"
           sendTransactionTimeout: 260
           percentageOfConfirmations: 50
+ 
+
+      - name: Dump seed context
+        run: echo "$ARCH_BASE_SEED"
+        env:
+          ARCH_BASE_SEED: $ARCH_BASE_SEED
 
       - name: Dump all GitHub context
         run: echo "$GITHUB_OUTPUT"
